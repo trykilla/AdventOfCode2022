@@ -42,7 +42,7 @@ fn divide_strings_two(vector: Vec<String>) {
         }
     }
     println!("{:?}", mut_vector);
-    print!("Suma: {}", g_sum);
+    println!("Suma: {}", g_sum);
 }
 
 fn _divide_strings(vector: Vec<String>) {
@@ -62,12 +62,12 @@ fn _divide_strings(vector: Vec<String>) {
                     let position = ((c as u32) - ('a' as u32)) + 1;
                     println!("{}", position);
                     g_sum = g_sum.checked_add(position).expect("Overflow");
-                    println!("Suma: {}", g_sum);
+                    println!("Suma: {}\n", g_sum);
                 } else if c.is_ascii_alphabetic() && c.is_uppercase() {
                     let position = (((c as u32) - ('A' as u32)) + 1) + 26;
                     println!("{}", position);
                     g_sum = g_sum.checked_add(position).expect("Overflow");
-                    println!("Suma: {}", g_sum);
+                    println!("Suma: {}\n", g_sum);
                 }
             }
             None => println!("No hay coincidencias"),
